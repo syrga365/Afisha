@@ -55,3 +55,7 @@ def review_details_view(request, id):
         return Response(status=status.HTTP_404_NOT_FOUND, data={'message': 'Review not found'})
     data = serializer.ReviewSerializer(review_id).data
     return Response(data=data)
+
+
+
+# Вывести режиссеров /api/v1/directors/ с количеством фильмов (movies_count)
