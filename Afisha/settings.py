@@ -22,7 +22,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'movie_app',
+    'rest_framework.authtoken',
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        'rest_framework.authentication.TokenAuthentication'
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -98,6 +105,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_USE_TLS = True
+
+EMAIL_PORT = 587
+
+EMAIL_HOST_USER = 'developerbackend68@gmail.com'
+
+EMAIL_HOST_PASSWORD = "nsuk qohj mwqd tvhg"
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
