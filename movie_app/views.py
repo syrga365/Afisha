@@ -178,14 +178,14 @@ def send_code_email(email):
 @api_view(['POST'])
 def verify_email(request):
     if request.method == 'POST':
-        code = request.data.get('code')
-        email = request.data.get('email')
+        verification_code = request.data.get('code')
+        email_verified = request.data.get('email')
 
-        if code and email:
-            user = models.RegistrationUser.objects.filter(email=email)
+        if verification_code and email_verified:
+            user = models.RegistrationUser.objects.filter(email_verified=email_verified)
             if user.exists():
                 user = user.first()
-                if user.verification_code == code:
+                if user.verification_code == verification_code:
                     user.email_verified = True
                     user.save()
                 else:

@@ -24,10 +24,9 @@ class DirectorSerializer(serializers.ModelSerializer):
 
 
 class MovieSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = models.Movie
-        fields = 'title'.split()
+        fields = 'title duration director'.split()
 
 
 class ReviewSerializer(serializers.ModelSerializer):
@@ -61,5 +60,3 @@ class ReviewCreateUpdateSerializer(serializers.Serializer):
     def validate_movie_id(self, movie_id):
         if models.Movie.objects.filter(id=movie_id).count() == 0:
             raise ValidationError(f'Movie with id {movie_id} does not exist')
-
-
