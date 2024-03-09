@@ -8,6 +8,8 @@ urlpatterns = [
     path('movie/<int:id>/', views.MovieUpdateDeleteAPIVIew.as_view()),
     path('reviews/', views.ReviewListAPIView.as_view()),
     path('reviews/', views.ReviewUpdateDeleteAPIVIew.as_view()),
-    path('register/', views.RegisterAPIView.as_view()),
+    path('register/', views.RegistrationAPIView.as_view()),
+    path('authorization/', views.AuthorizationAPIView.as_view()),
+    path('verify/', views.VerifyEmailAPIView.as_view()),
 
 ]

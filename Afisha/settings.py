@@ -120,8 +120,6 @@ EMAIL_HOST_USER = 'developerbackend68@gmail.com'
 
 EMAIL_HOST_PASSWORD = "nsuk qohj mwqd tvhg"
 
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
