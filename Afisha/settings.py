@@ -7,7 +7,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
-PROXY_URL = config('PROXY_URL')
 
 ALLOWED_HOSTS = ['syrgataalaibekova.pythonanywhere.com']
 
